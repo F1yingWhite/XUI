@@ -15,9 +15,9 @@ header {
 }
 
 footer {
+    justify-content: center;
     height: 50px;
     background-color: #F2D8D7;
-
 }
 
 section {
@@ -57,4 +57,31 @@ main {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #393737;
+}
+
+.siderbar_title {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.siderbar_list {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #5b5b5b;
+}
+
+.siderbar_list_selected {
+    color: #F2D8D7;
+}
+
+.siderbar_list:hover {
+    color: #F2D8D7;
+}
+
+.siderbar_title_2 {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #a1a1a1;
 }
