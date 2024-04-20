@@ -5,12 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/text.css">
   <title>Document</title>
 </head>
 
 <body>
-  <!-- 表单组件，需包含input输入框组件以及视频中的全部组件 -->
+  <h1 class="title">多选框</h1>
+  <div class="text">一组备选项中进行多选</div>
 
+  <form class="container">
+    <input type="checkbox" id="checkboxA" name="checkboxA" value="复选框 A">
+    <label for="checkboxA">复选框 A</label>
+    <input type="checkbox" id="checkboxB" name="checkboxB" value="复选框 B">
+    <label for="checkboxB">复选框 B</label>
+    <input type="checkbox" id="checkboxC" name="checkboxC" value="复选框 C">
+    <label for="checkboxC">复选框 C</label>
+    <input type="checkbox" id="checkboxDisabled" name="checkboxDisabled" value="禁用" disabled>
+    <label for="checkboxDisabled">禁用</label>
+    <input type="checkbox" id="checkboxDisabledChecked" name="checkboxDisabledChecked" value="选中且禁用" disabled checked>
+    <label for="checkboxDisabledChecked">选中且禁用</label>
+  </form>
 </body>
 
 </html>

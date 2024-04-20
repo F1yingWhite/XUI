@@ -6,8 +6,8 @@ var dict = {
   "Color颜色": "./components/basic/color/index.html",
 
   "input输入": "./components/form/input/index.html",
-  "radio单选框": "./components/form/radio/index.html",
-  "checkbox多选框": "./components/form/checkbox/index.html",
+  "radioGroup单选框": "./components/form/radio/index.html",
+  "checkBoxGroup多选框": "./components/form/checkBoxGroup/index.html",
   "select选择": "./components/form/select/index.html",
   "switch开关": "./components/form/switch/index.html",
   "inputNumber数字输入": "./components/form/inputNumber/index.html",
@@ -30,3 +30,7 @@ for (var i = 0; i < listItems.length; i++) {
     main.appendChild(iframe);
   });
 }
+
+//自动选择color
+var color = document.querySelector('.siderbar_list');
+color.click();
