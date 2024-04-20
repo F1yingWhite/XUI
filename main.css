@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 header,
@@ -29,15 +30,16 @@ section {
 main,
 aside {
     height: 100%;
-    overflow-y: scroll;
 }
 
 aside {
     width: 250px;
+    overflow-y:scroll;
     padding-left: 20px;
 }
 
 main {
+    overflow: hidden;
     width: calc(100vw - 250px);
 }
 
