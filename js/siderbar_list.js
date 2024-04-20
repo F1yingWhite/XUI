@@ -1,10 +1,17 @@
 var listItems = document.querySelectorAll('.siderbar_list');
 
 var dict = {
-  "Button按钮": "./components/button/index.html",
-  "Layout布局组件": "./components/layout/index.html",
-  "Color颜色": "./components/color/index.html",
-  "Form组件": "./components/form/index.html",
+  "Button按钮": "./components/basic/button/index.html",
+  "Layout布局组件": "./components/basic/layout/index.html",
+  "Color颜色": "./components/basic/color/index.html",
+
+  "input输入": "./components/form/input/index.html",
+  "radio单选框": "./components/form/radio/index.html",
+  "checkbox多选框": "./components/form/checkbox/index.html",
+  "select选择": "./components/form/select/index.html",
+  "switch开关": "./components/form/switch/index.html",
+  "inputNumber数字输入": "./components/form/inputNumber/index.html",
+  "colorPicker颜色选择": "./components/form/colorPicker/index.html",
 }
 
 for (var i = 0; i < listItems.length; i++) {

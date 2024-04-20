@@ -80,16 +80,16 @@ section {
     opacity: 0.8;
 }
 
-.text {
+.text-button {
     background-color: transparent;
     color: #585656;
 }
 
-.text:hover {
+.text-button:hover {
     color: #a51a1a;
 }
 
-.text:active {
+.text-button:active {
     color: #c27979;
 }
 
