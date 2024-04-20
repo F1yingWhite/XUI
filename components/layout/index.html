@@ -2,48 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Layout布局组件</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="../../css/text.css">
+  <title>Layout布局组件</title>
 </head>
 
-<body>
+<di>
+  <h1 class="title">Layout布局组件</h1>
+  <div class="text">
+    Taffy UI的布局组件包括Header，Footer，Sider，Content，Container等，可以实现以下4种布局方式。
+  </div>
+  <div class="show-area">
     <div class="container">
-        <div class="header">Header</div>
+      <div class="header">Header</div>
+      <div class="content">Content</div>
+      <div class="footer">Footer</div>
+    </div>
+
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="main-horizontal ">
+        <div class="sider">Sider</div>
         <div class="content">Content</div>
-        <div class="footer">Footer</div>
+      </div>
+      <div class="footer">Footer</div>
     </div>
 
     <div class="container">
-        <div class="header">Header</div>
-        <div class="main-horizontal ">
-            <div class="sider">Sider</div>
-            <div class="content">Content</div>
-        </div>
-        <div class="footer">Footer</div>
+      <div class="header">Header</div>
+      <div class="main-horizontal ">
+        <div class="content">Content</div>
+        <div class="sider">Sider</div>
+      </div>
+      <div class="footer">Footer</div>
     </div>
 
     <div class="container">
-        <div class="header">Header</div>
-        <div class="main-horizontal ">
-            <div class="content">Content</div>
-            <div class="sider">Sider</div>
+      <div class="main-horizontal ">
+        <div class="sider">Sider</div>
+        <div class="main-vertical">
+          <div class="header">Header</div>
+          <div class="content">Content</div>
+          <div class="footer">Footer</div>
         </div>
-        <div class="footer">Footer</div>
+      </div>
     </div>
-
-    <div class="container">
-        <div class="main-horizontal ">
-            <div class="sider">Sider</div>
-            <div class="main-vertical">
-                <div class="header">Header</div>
-                <div class="content">Content</div>
-                <div class="footer">Footer</div>
-            </div>
-        </div>
-    </div>
-
-</body>
+  </div>
+  </body>
 
 </html>
