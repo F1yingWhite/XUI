@@ -3,6 +3,19 @@
     border-radius: 8px;
     font-size: 15px;
     padding: 10px 20px;
+    margin: 10px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .primary {
@@ -17,19 +30,31 @@
     color: #ffffff;
 }
 
-.secondary {
+.second {
+    background-color: #EDCFB1;
+    border: 2px solid #EDCFB1;
+    color: #585656;
+}
+
+.second:active {
+    border: 2px solid #ebbc8c;
+    background-color: #ebbc8c;
+    color: #ffffff;
+}
+
+.block {
     background-color: #ffffff;
     color: #585656;
     border: 2px solid #F2D8D7;
 }
 
-.secondary:hover {
+.block:hover {
     background-color: #F2D8D7;
     color: #ffffff;
     opacity: 0.8;
 }
 
-.secondary:active {
+.block:active {
     background-color: #f4cac8;
     color: #ffffff;
     opacity: 0.8;
