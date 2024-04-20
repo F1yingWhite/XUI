@@ -1,0 +1,33 @@
+select {
+    width: 200px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid rgb(198, 187, 187);
+    color: #585656;
+    padding: 5px;
+    font-size: 14px;
+}
+
+select:focus {
+    outline-color: #F2D8D7;
+}
+
+select option {
+    background-color: white;
+    color: #585656;
+    height: 100px;
+    padding: 50px 100px;
+    border-bottom: 1px solid #ccc;
+}
+
+select option:checked {
+    background-color: #ccc;
+
+    color: #fff;
+
+}
+
+select option:hover {
+    background-color: #F2D8D7;
+    color: #555;
+}
