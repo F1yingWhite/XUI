@@ -25,7 +25,7 @@
     align-items: center;
     margin: 10px 0;
     border: 2px solid #F2D8D7;
-    height: 100px;
+    min-height: 100px;
     border-radius: 8px;
 }
 

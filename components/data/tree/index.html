@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/text.css">
+	<title>Document</title>
+</head>
+<!-- TODO:树形组件 -->
+
+<body>
+	<h1 class="title">树形组件</h1>
+	<div class="text">用于列表的打开和关闭</div>
+	<h2 class="title">基本用法</h2>
+	<div class="container">
+		<div class="tree">
+			<ul>
+				<li>
+					<span class="toggle">+</span>
+					一级目录1
+					<ul class="nested">
+						<li>二级目录1</li>
+						<li>二级目录2</li>
+						<li>
+							<span class="toggle">+</span>
+							三级目录1
+							<ul class="nested">
+								<li>四级目录1</li>
+								<li>四级目录2</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

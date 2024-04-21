@@ -12,6 +12,9 @@ var dict = {
   "switch开关": "./components/form/switch/index.html",
   "inputNumber数字输入": "./components/form/inputNumber/index.html",
   "colorPicker颜色选择": "./components/form/colorPicker/index.html",
+
+  "Table 表单组件": "./components/data/table/index.html",
+  "Tree 树形组件": "./components/data/tree/index.html",
 }
 
 for (var i = 0; i < listItems.length; i++) {
