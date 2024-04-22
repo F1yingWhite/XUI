@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 codeArea.classList.remove("expanded");
                 arrow.innerHTML = "&#9660;";
             } else {
-                var expandedHeight = codeArea.scrollHeight + 200;
+                var expandedHeight = codeArea.scrollHeight + 100;
                 codeArea.style.maxHeight = expandedHeight + "px";
                 codeArea.classList.add("expanded");
                 arrow.innerHTML = "&#9650;";

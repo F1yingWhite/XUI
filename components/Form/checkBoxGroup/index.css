@@ -1,14 +1,14 @@
-input[type="checkbox"] {
+.checkbox {
     display: none;
 }
 
-input[type="checkbox"]+label {
+.checkbox+label {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
 }
 
-input[type="checkbox"]+label::before {
+.checkbox+label::before {
     content: '';
     position: absolute;
     left: 10px;
@@ -19,11 +19,11 @@ input[type="checkbox"]+label::before {
     border: 1px solid rgb(198, 187, 187);
 }
 
-input[type="checkbox"]:checked+label::before {
+.checkbox:checked+label::before {
     background-color: #F2D8D7;
 }
 
-input[type="checkbox"]:checked+label::after {
+.checkbox:checked+label::after {
     content: '\2714';
     font-size: 13px;
     line-height: 15px;
@@ -34,7 +34,7 @@ input[type="checkbox"]:checked+label::after {
 }
 
 
-input[type="checkbox"]:disabled+label::before {
+.checkbox:disabled+label::before {
     background-color: lightgray;
     cursor: not-allowed;
 }

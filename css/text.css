@@ -41,6 +41,8 @@
     transition: max-height 0.3s ease;
     min-height: 0;
     overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2em;
 }
 
 .arrow-container {
@@ -50,6 +52,6 @@
     cursor: pointer;
 }
 
-.place_holder{
+.place_holder {
     width: 20px;
 }

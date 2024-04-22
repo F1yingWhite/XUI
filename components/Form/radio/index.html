@@ -23,13 +23,26 @@
     由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。
   </div>
   <form class="container">
-    <input type="radio" id="option1" name="radioGroup" value="option1">
+    <div class="place_holder"></div>
+    <input type="radio" class="radio" id="option1" name="radioGroup" value="option1">
     <label for="option1">选项1</label><br>
-    <input type="radio" id="option2" name="radioGroup" value="option2">
+    <input type="radio" class="radio" id="option2" name="radioGroup" value="option2">
     <label for="option2">选项2</label><br>
-    <input type="radio" id="option3" name="radioGroup" value="option3">
+    <input type="radio" class="radio" id="option3" name="radioGroup" value="option3">
     <label for="option3">选项3</label>
   </form>
+  <div class="code-area">
+    <pre>
+      <code>
+        &lt;input type="radio" class="radio" id="option1" name="radioGroup" value="option1"&gt;
+        &lt;label for="option1"&gt;选项1&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" class="radio" id="option2" name="radioGroup" value="option2"&gt;
+        &lt;label for="option2"&gt;选项2&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" class="radio" id="option3" name="radioGroup" value="option3"&gt;
+        &lt;label for="option3"&gt;选项3&lt;/label&gt;
+      </code>
+    </pre>
+  </div>
   <h2 class="title">
     禁用状态
   </h2>
@@ -37,14 +50,29 @@
     单选框不可用的状态。
   </div>
   <form class="container">
-    <input type="radio" id="option4" name="radioGroup" value="option4" disabled>
+    <div class="place_holder"></div>
+    <input type="radio" class="radio" id="option4" name="radioGroup" value="option4" disabled>
     <label for="option4">选项1</label><br>
-    <input type="radio" id="option5" name="radioGroup" value="option5" disabled>
+    <input type="radio" class="radio" id="option5" name="radioGroup" value="option5" disabled>
     <label for="option5">选项2</label><br>
-    <input type="radio" id="option6" name="radioGroup" value="option6" disabled>
+    <input type="radio" class="radio" id="option6" name="radioGroup" value="option6" disabled>
     <label for="option6">选项3</label>
   </form>
+  <div class="code-area">
+    <pre>
+      <code>
+        &lt;input type="radio" class="radio" id="option4" name="radioGroup" value="option4" disabled&gt;
+        &lt;label for="option4"&gt;选项1&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" class="radio" id="option5" name="radioGroup" value="option5" disabled&gt;
+        &lt;label for="option5"&gt;选项2&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" class="radio" id="option6" name="radioGroup" value="option6" disabled&gt;
+        &lt;label for="option6"&gt;选项3&lt;/label&gt;
+      </code>
+    </pre>
+  </div>
 </body>
 
+<script src="../../../js/code.js"></script>
+<script src="../../../js/container.js"></script>
 
 </html>
