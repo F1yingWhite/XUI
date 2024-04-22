@@ -11,8 +11,13 @@ codeBlocks.forEach(function (codeBlock) {
     updatedText = updatedText.replace(/&lt;\/(\w+)/g, "<span style='color: #6eb2d0;'>&lt;/</span><span style='color: #6eb2d0;'>$1</span>");
 
     updatedText = updatedText.replace(/&gt;/g, "<span style='color: #6eb2d0;'>&gt;</span>");
-    // 将所有的 class 替换为黄色
+    // 将所有的 class/type/placeholder/disabled/id/value 替换为黄色
     updatedText = updatedText.replace(/class/g, "<span style='color: #e8b15c;'>class</span>");
+    updatedText = updatedText.replace(/type/g, "<span style='color: #e8b15c;'>type</span>");
+    updatedText = updatedText.replace(/placeholder/g, "<span style='color: #e8b15c;'>placeholder</span>");
+    updatedText = updatedText.replace(/disabled/g, "<span style='color: #e8b15c;'>disabled</span>");
+    updatedText = updatedText.replace(/id/g, "<span style='color: #e8b15c;'>id</span>");
+    updatedText = updatedText.replace(/value/g, "<span style='color: #e8b15c;'>value</span>");
     // 将双引号括起来的内容变成叶绿色
     updatedText = updatedText.replace(/"(.*?)"/g, "<span style='color: #4caf50;'>&quot;$1&quot;</span>");
     codeBlock.innerHTML = updatedText;

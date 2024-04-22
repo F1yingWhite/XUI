@@ -3,9 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     containers.forEach(function (container) {
         var codeArea = container.nextElementSibling;
+        var arrowContainer = document.createElement("div"); // 创建一个容器用于放置箭头
+        arrowContainer.classList.add("arrow-container");
         var arrow = document.createElement("span");
         arrow.innerHTML = "&#9660;";
-        container.appendChild(arrow);
+        arrowContainer.appendChild(arrow); // 将箭头添加到容器中
+        container.appendChild(arrowContainer); // 将容器添加到 container 中
         codeArea.classList.remove("expanded");
         codeArea.style.maxHeight = "0";
 

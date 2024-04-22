@@ -1,4 +1,4 @@
-select {
+.select {
     width: 200px;
     height: 30px;
     border-radius: 6px;
@@ -8,11 +8,11 @@ select {
     font-size: 14px;
 }
 
-select:focus {
+.select:focus {
     outline-color: #F2D8D7;
 }
 
-select option {
+.select option {
     background-color: white;
     color: #585656;
     height: 100px;
@@ -20,14 +20,14 @@ select option {
     border-bottom: 1px solid #ccc;
 }
 
-select option:checked {
+.select option:checked {
     background-color: #ccc;
 
     color: #fff;
 
 }
 
-select option:hover {
+.select option:hover {
     background-color: #F2D8D7;
     color: #555;
 }

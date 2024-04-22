@@ -22,11 +22,13 @@
 
 .container,
 .code-area {
+    position: relative;
     display: flex;
     align-items: center;
     margin: 10px 0;
     border: 2px solid #F2D8D7;
     border-radius: 8px;
+    width: 95vw;
 }
 
 .container {
@@ -34,13 +36,20 @@
 
 }
 
-.container :first-child {
-    margin-left: 20px;
-}
-
 .code-area {
     background-color: #fafafa;
     transition: max-height 0.3s ease;
     min-height: 0;
     overflow: hidden;
+}
+
+.arrow-container {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.place_holder{
+    width: 20px;
 }
