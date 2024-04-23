@@ -1,17 +1,41 @@
+.tree,
 .tree ul {
+    font-size: 0.9em;
+    color: #585656;
     list-style-type: none;
-    padding-left: 20px;
+    position: relative;
 }
 
-.tree .toggle {
-    cursor: pointer;
-    user-select: none;
+.tree-expanded::before {
+    content: "▼";
+    color: #c0c4cc;
+    font-size: 0.8em;
 }
 
-.tree .nested {
+.tree-collapsed::before {
+    content: "►";
+    color: #c0c4cc;
+    font-size: 0.8em;
+}
+
+.tree-children {
     display: none;
 }
 
-.tree .active {
+.tree-children.tree-open {
     display: block;
+}
+
+.tree li {
+    position: relative;
+    left: -15px;
+}
+
+.tree-children div {
+    position: relative;
+    left: -13px;
+}
+
+.highlight {
+    background-color: #F2D8D7;
 }
