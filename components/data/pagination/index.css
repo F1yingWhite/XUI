@@ -1,18 +1,16 @@
-.pagination,
-.pagination-variable {
+.pagination {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 20px 0;
+    position: relative;
 }
 
-.pagination li,
-.pagination-variable li {
+.pagination li {
     margin: 0 5px;
 }
 
-.pagination li a,
-.pagination-variable li a {
+.pagination li a {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid #ccc;
@@ -20,12 +18,45 @@
     color: #333;
 }
 
-.pagination li a.active,
-.pagination-variable li a.active {
+.pagination li a.active {
     background-color: #F2D8D7;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+}
+
+.page-size-input {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    color: #333;
+}
+
+
+.input-number {
+    position: relative;
+    top: -5px;
+    width: 70px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid rgb(198, 187, 187);
+}
+
+.input-number:focus {
+    outline-color: #F2D8D7;
+}
+
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
+    opacity: 0.7;
+}
+
+.page-size-label{
+    position: relative;
+    left: -55px;
+    top: -1.2px;
+    font-size: 0.7em;
 }

@@ -1,76 +1,112 @@
-const perPage = 10;
-let currentPage = 1;
-
-function createPaginationButtons() {
-    const paginationUl = document.getElementsByClassName('pagination')[0];
-    paginationUl.innerHTML = '';
-
-    function createOnePage(name) {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.textContent = name;
-        a.href = '#';
-        a.addEventListener('click', function (event) {
-            event.preventDefault();
-            if (!isNaN(name)) {
-                handlePageClick(name);
-            }
-        });
-        if (name === currentPage) {
-            a.classList.add('active');
+class Pagination {
+    constructor(containerSelector, totalNum, perPage = 10) {
+        this.container = document.querySelector(containerSelector);
+        if (containerSelector == ".pagination.variable") {
+            //在按钮最后创建一个input number用来修改每页显示的数量
+            this.changeable = true
+        } else {
+            this.changeable = false
         }
-        li.appendChild(a);
-        paginationUl.appendChild(li);
+        this.totalNum = totalNum;
+        this.totalPages = Math.ceil(totalNum / perPage);
+        this.perPage = perPage;
+        this.currentPage = 1;
     }
 
-    const totalPages = 1000;
-    if (totalPages <= 9) {
-        for (let i = 1; i <= totalPages; i++) {
-            createOnePage(i);
-        }
-    } else {
-        //展示current page前后的3个页码, 其他页码用...代替
-        if (currentPage < 5) {
-            for (let i = 1; i <= 8; i++) {
-                createOnePage(i);
+    createPaginationButtons() {
+        this.container.innerHTML = '';
+
+        function createOnePage(name) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.textContent = name;
+            a.addEventListener('click', event => {
+                event.preventDefault();
+                if (!isNaN(name)) {
+                    this.handlePageClick(name);
+                }
+            });
+            if (name === this.currentPage) {
+                a.classList.add('active');
             }
-            createOnePage("...");
-            // 再创建最后一个页码
-            createOnePage(totalPages);
+            li.appendChild(a);
+            this.container.appendChild(li);
         }
-        else if (currentPage > totalPages - 3) {
-            //创建第一个页码
-            createOnePage(1);
-            createOnePage("...");
-            for (let i = totalPages - 8; i <= totalPages; i++) {
-                createOnePage(i);
+
+        if (this.totalPages <= 9) {
+            for (let i = 1; i <= this.totalPages; i++) {
+                createOnePage.call(this, i);
             }
         } else {
-            //创建第一个页码
-            createOnePage(1);
-            createOnePage("...");
-            for (let i = currentPage - 3; i <= currentPage + 2; i++) {
-                createOnePage(i);
+            if (this.currentPage < 5) {
+                for (let i = 1; i <= 8; i++) {
+                    createOnePage.call(this, i);
+                }
+                createOnePage.call(this, "...");
+                createOnePage.call(this, this.totalPages);
+            } else if (this.currentPage > this.totalPages - 3) {
+                createOnePage.call(this, 1);
+                createOnePage.call(this, "...");
+                for (let i = this.totalPages - 8; i <= this.totalPages; i++) {
+                    createOnePage.call(this, i);
+                }
+            } else {
+                createOnePage.call(this, 1);
+                createOnePage.call(this, "...");
+                for (let i = this.currentPage - 3; i <= this.currentPage + 2; i++) {
+                    createOnePage.call(this, i);
+                }
+                createOnePage.call(this, "...");
+                createOnePage.call(this, this.totalPages);
             }
-            createOnePage("...");
-            // 再创建最后一个页码
-            createOnePage(totalPages);
         }
+        //创建一个input number用来修改每页显示的数量
+        if (this.changeable) {
+            const li = document.createElement('li');
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.value = this.perPage;
+            input.className = 'input-number';
+            input.addEventListener('change', event => {
+                event.preventDefault();
+                this.handlePageSizeChange(input.value);
+            });
+            li.appendChild(input);
+            this.container.appendChild(li);
+            //创建一个label,写着 条/页(因为用伪类写不出来不知道为什么)
+            const li2 = document.createElement('li');
+            const label = document.createElement('label');
+            label.textContent = '条/页';
+            label.className = "page-size-label"
+            li2.appendChild(label);
+            this.container.appendChild(li2);
+        }
+    }
+
+    handlePageClick(page) {
+        this.currentPage = page;
+        this.createPaginationButtons();
+        const paginationLinks = this.container.querySelectorAll('li a');
+        paginationLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        for (let i = 0; i < paginationLinks.length; i++) {
+            if (paginationLinks[i].textContent == page) {
+                paginationLinks[i].classList.add('active');
+            }
+        }
+    }
+
+    handlePageSizeChange(page_size) {
+        console.log("大小改变")
+        this.perPage = page_size;
+        this.totalPages = Math.ceil(this.totalNum / this.perPage);
+        this.createPaginationButtons();
     }
 }
 
-function handlePageClick(page) {
-    currentPage = page;
-    createPaginationButtons();
-    const paginationLinks = document.querySelectorAll('.pagination li a');
-    paginationLinks.forEach(link => {
-        link.classList.remove('active');
-    });
-    for (let i = 0; i < paginationLinks.length; i++) {
-        if (paginationLinks[i].textContent == page) {
-            paginationLinks[i].classList.add('active');
-        }
-    }
-}
+const pagination1 = new Pagination('.pagination', 1000);
+pagination1.createPaginationButtons();
 
-createPaginationButtons();
+const pagination2 = new Pagination('.pagination.variable', 1000);
+pagination2.createPaginationButtons();
