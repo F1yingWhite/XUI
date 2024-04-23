@@ -16,6 +16,10 @@ var dict = {
   "Table 表单组件": "./components/data/table/index.html",
   "Tree 树形组件": "./components/data/tree/index.html",
   "Pagination 分页组件": "./components/data/pagination/index.html",
+
+  "Tag 标签组件": "./components/others/tag/index.html",
+  "Notable 走马灯": "./components/others/notable/index.html",
+  "Dialog 对话框组件": "./components/others/dialog/index.html",
 }
 
 for (var i = 0; i < listItems.length; i++) {
