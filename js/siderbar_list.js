@@ -15,6 +15,7 @@ var dict = {
 
   "Table 表单组件": "./components/data/table/index.html",
   "Tree 树形组件": "./components/data/tree/index.html",
+  "Pagination 分页组件": "./components/data/pagination/index.html",
 }
 
 for (var i = 0; i < listItems.length; i++) {
