@@ -2,15 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/text.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Table Component</title>
+	<link rel="stylesheet" type="text/css" href="../../../css/text.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
-
+	<h1 class="title">表格组件</h1>
+	<div class="text">用于展示数据</div>
+	<h2 class="title">基本用法</h2>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>邮件</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>许一涵</td>
+					<td>21</td>
+					<td>81723334@qq.com</td>
+				</tr>
+				<tr>
+					<td>许二涵</td>
+					<td>25</td>
+					<td>817223334@qq.com</td>
+				</tr>
+				<tr>
+					<td>许三涵</td>
+					<td>23</td>
+					<td>817@qq.com</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="code-area">
+		<pre>
+			<code>
+        &lt;table class=&quot;table&quot;&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;姓名&lt;/th&gt;
+              &lt;th&gt;年龄&lt;/th&gt;
+              &lt;th&gt;邮件&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;许一涵&lt;/td&gt;
+              &lt;td&gt;21&lt;/td&gt;
+              &lt;td&gt;81723334@qq.com&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;许二涵&lt;/td&gt;
+              &lt;td&gt;25&lt;/td&gt;
+              &lt;td&gt;817223334@qq.com&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;许三涵&lt;/td&gt;
+              &lt;td&gt;23&lt;/td&gt;
+              &lt;td&gt;817@qq.com&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      </code>		
+    </pre>
+	</div>
 </body>
+
+<script src="index.js"></script>
+<script src="../../../js/code.js"></script>
+<script src="../../../js/container.js"></script>
 
 </html>

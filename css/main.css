@@ -18,7 +18,7 @@ header {
 footer {
     justify-content: center;
     height: 40px;
-    background-color: #F2D8D7;
+    background-color: #ebd5d5;
 }
 
 section {
@@ -34,7 +34,7 @@ aside {
 
 aside {
     width: 250px;
-    overflow-y:scroll;
+    overflow-y: scroll;
     padding-left: 20px;
 }
 
