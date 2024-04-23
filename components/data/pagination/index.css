@@ -1,23 +1,31 @@
-.pagination {
+.pagination,
+.pagination-variable {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 20px 0;
 }
 
-.pagination li {
+.pagination li,
+.pagination-variable li {
     margin: 0 5px;
 }
 
-.pagination li a {
+.pagination li a,
+.pagination-variable li a {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
     color: #333;
 }
 
-.pagination li a.active {
-    background-color: #007bff;
-    color: #fff;
+.pagination li a.active,
+.pagination-variable li a.active {
+    background-color: #F2D8D7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
