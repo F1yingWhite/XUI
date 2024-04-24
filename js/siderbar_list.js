@@ -18,7 +18,7 @@ var dict = {
   "Pagination 分页组件": "./components/data/pagination/index.html",
 
   "Tag 标签组件": "./components/others/tag/index.html",
-  "Notable 走马灯": "./components/others/notable/index.html",
+  "Carousel 走马灯": "./components/others/carousel/index.html",
   "Dialog 对话框组件": "./components/others/dialog/index.html",
 }
 

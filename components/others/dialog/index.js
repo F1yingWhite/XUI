@@ -1,4 +1,3 @@
-// 查找class有dialog的元素,并且添加点击事件,然后展示一个对话框,展示button子元素div的内容
 var dialog = document.querySelectorAll('.dialog-button');
 dialog.forEach(function (item) {
     item.addEventListener('click', function () {
@@ -15,6 +14,7 @@ dialog.forEach(function (item) {
         parent.document.body.appendChild(mask);
         // 创建一个对话框
         var dialog = document.createElement('div');
+        dialog.style.position = "relative"
         dialog.style.borderRadius = '5px';
         dialog.style.position = 'fixed';
         dialog.style.top = '50%';
@@ -23,27 +23,27 @@ dialog.forEach(function (item) {
         dialog.style.backgroundColor = '#fff';
         dialog.style.padding = '20px';
         dialog.style.zIndex = '1000';
+        dialog.style.height = '200px';
+        dialog.style.width = '300px';
+        dialog.style.border = '3px solid #ebd5d5';
+        dialog.style.color = '#585656';
         dialog.textContent = content;
-        
-        //dialog底下添加一个按钮
-        var button = document.createElement('button');
-        button.textContent = '关闭';
-        button.style.display = 'block';
-        button.style.margin = '0 auto';
-        button.style.padding = '5px 10px';
-        button.style.backgroundColor = '#f00';
-        button.style.color = '#fff';
-        button.style.border = 'none';
-        button.style.cursor = 'pointer';
-        button.style.outline = 'none';
 
-        button.addEventListener('click', function () {
-            parent.document.body.removeChild(dialog);
+        //dialog右上角添加一个×
+        var close = document.createElement('span');
+        close.textContent = '×';
+        close.style.position = 'relative';
+        close.style.top = '-25px';
+        close.style.right = '-170px';
+        close.style.cursor = 'pointer';
+        close.style.fontSize = '20px';
+        close.style.color = '#ebd5d5';
+        close.addEventListener('click', function () {
             parent.document.body.removeChild(mask);
+            parent.document.body.removeChild(dialog);
         });
-        dialog.appendChild(button);
+        dialog.appendChild(close);
         parent.document.body.appendChild(dialog);
-
     });
 });
 

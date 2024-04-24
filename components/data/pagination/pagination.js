@@ -1,5 +1,5 @@
 class Pagination {
-    constructor(containerSelector, totalNum, perPage = 10) {
+    constructor(containerSelector, perPage = 10) {
         this.container = document.querySelector(containerSelector);
         if (containerSelector == ".pagination.variable") {
             //在按钮最后创建一个input number用来修改每页显示的数量
@@ -7,8 +7,10 @@ class Pagination {
         } else {
             this.changeable = false
         }
-        this.totalNum = totalNum;
-        this.totalPages = Math.ceil(totalNum / perPage);
+        this.totalNum = this.container.getAttribute('nums');
+        console.log(this.container)
+        console.log(this.totalNum)
+        this.totalPages = Math.ceil(this.totalNum / perPage);
         this.perPage = perPage;
         this.currentPage = 1;
     }
@@ -98,15 +100,14 @@ class Pagination {
     }
 
     handlePageSizeChange(page_size) {
-        console.log("大小改变")
         this.perPage = page_size;
         this.totalPages = Math.ceil(this.totalNum / this.perPage);
         this.createPaginationButtons();
     }
 }
 
-const pagination1 = new Pagination('.pagination', 1000);
+const pagination1 = new Pagination('.pagination');
 pagination1.createPaginationButtons();
 
-const pagination2 = new Pagination('.pagination.variable', 1000);
+const pagination2 = new Pagination('.pagination.variable');
 pagination2.createPaginationButtons();
