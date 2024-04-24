@@ -10,3 +10,9 @@
     color: #887b6e;
     border-radius: 5px;
 }
+
+.file-img-list {
+    width: auto;
+    height: 200px;
+    margin-right: 10px;
+}
