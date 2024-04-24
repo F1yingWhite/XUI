@@ -1,0 +1,12 @@
+.file-list {
+    color: #585656;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.file-list:hover {
+    background-color: #F2D8D7;
+    color: #887b6e;
+    border-radius: 5px;
+}

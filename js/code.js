@@ -19,6 +19,8 @@ codeBlocks.forEach(function (codeBlock) {
     updatedText = updatedText.replace(/id/g, "<span style='color: #e8b15c;'>id</span>");
     updatedText = updatedText.replace(/value/g, "<span style='color: #e8b15c;'>value</span>");
     updatedText = updatedText.replace(/nums/g, "<span style='color: #e8b15c;'>nums</span>");
+    updatedText = updatedText.replace(/scale/g, "<span style='color: #e8b15c;'>scale</span>");
+    updatedText = updatedText.replace(/src/g, "<span style='color: #e8b15c;'>src</span>");
     // 将双引号括起来的内容变成叶绿色
     updatedText = updatedText.replace(/"(.*?)"/g, "<span style='color: #4caf50;'>&quot;$1&quot;</span>");
     codeBlock.innerHTML = updatedText;
